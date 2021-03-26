@@ -1,0 +1,701 @@
+@prefix : <http://covid19.dai.org/covid19/TradingStatus> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix acco: <http://purl.org/acco/ns#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+
+@prefix property: <http://covid19.dai.org/covid19/schema> .
+
+:T202004_202005 rdf:type property:TimePeriod;
+	dc:title "202004_202005";
+	acco:min "2020-04-06"^^xsd:data;
+	acco:max "2020-04-19"^^xsd:data .
+
+:Industry rdf:type property:GovernmentSchemesSortType;
+	dc:title "By industry" .
+
+:T202004_202005 rdf:type property:TimePeriod;
+	dc:title "202004_202005";
+	acco:min "2020-04-06"^^xsd:data;
+	acco:max "2020-04-19"^^xsd:data .
+
+:WorkforceSize rdf:type property:GovernmentSchemesSortType;
+	dc:title "By size band" .
+
+:T202004_202005 rdf:type property:TimePeriod;
+	dc:title "202004_202005";
+	acco:min "2020-04-06"^^xsd:data;
+	acco:max "2020-04-19"^^xsd:data .
+
+:Country rdf:type property:GovernmentSchemesSortType;
+	dc:title "By country" .
+
+:Continuingtotrade rdf:type property:TradingStatus;
+	 dc:title "Continuing to trade" .
+
+:Haspermanentlyceasedtrading__ rdf:type property:TradingStatus;
+	 dc:title "Has permanently ceased trading **" .
+
+:Hastemporarilyclosedortemporarilypausedtrading rdf:type property:TradingStatus;
+	 dc:title "Has temporarily closed or temporarily paused trading" .
+
+:Manufacturing rdf:type property:Industry;
+	 dc:title "Manufacturing" .
+
+:WaterSupplySewerageWasteManagementAndRemediationActivities rdf:type property:Industry;
+	 dc:title "Water Supply, Sewerage, Waste Management And Remediation Activities" .
+
+:Construction rdf:type property:Industry;
+	 dc:title "Construction" .
+
+:WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles rdf:type property:Industry;
+	 dc:title "Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles" .
+
+:AccommodationAndFoodServiceActivities rdf:type property:Industry;
+	 dc:title "Accommodation And Food Service Activities" .
+
+:TransportationAndStorage rdf:type property:Industry;
+	 dc:title "Transportation And Storage" .
+
+:InformationAndCommunication rdf:type property:Industry;
+	 dc:title "Information And Communication" .
+
+:ProfessionalScientificAndTechnicalActivities rdf:type property:Industry;
+	 dc:title "Professional, Scientific And Technical Activities" .
+
+:AdministrativeAndSupportServiceActivities rdf:type property:Industry;
+	 dc:title "Administrative And Support Service Activities" .
+
+:Education rdf:type property:Industry;
+	 dc:title "Education" .
+
+:HumanHealthAndSocialWorkActivities rdf:type property:Industry;
+	 dc:title "Human Health And Social Work Activities" .
+
+:ArtsEntertainmentAndRecreation rdf:type property:Industry;
+	 dc:title "Arts, Entertainment And Recreation" .
+
+:AllIndustries rdf:type property:Industry;
+	 dc:title "All Industries" .
+
+:Continuingtotrade rdf:type property:TradingStatus;
+	 dc:title "Continuing to trade" .
+
+:Haspermanentlyceasedtrading__ rdf:type property:TradingStatus;
+	 dc:title "Has permanently ceased trading **" .
+
+:Hastemporarilyclosedortemporarilypausedtrading rdf:type property:TradingStatus;
+	 dc:title "Has temporarily closed or temporarily paused trading" .
+
+:LessThan250 rdf:type property:WorkforceSize;
+	 dc:title " < 250 " .
+
+:250Plus rdf:type property:WorkforceSize;
+	 dc:title " 250 +" .
+
+:AllSizeBands rdf:type property:WorkforceSize;
+	 dc:title "All Size Bands" .
+
+:Continuingtotrade rdf:type property:TradingStatus;
+	 dc:title "Continuing to trade" .
+
+:Haspermanentlyceasedtrading__ rdf:type property:TradingStatus;
+	 dc:title "Has permanently ceased trading **" .
+
+:Hastemporarilyclosedortemporarilypausedtrading rdf:type property:TradingStatus;
+	 dc:title "Has temporarily closed or temporarily paused trading" .
+
+:England rdf:type property:Country;
+	 dc:title "England" .
+
+:Wales rdf:type property:Country;
+	 dc:title "Wales" .
+
+:Scotland rdf:type property:Country;
+	 dc:title "Scotland" .
+
+:NorthernIreland rdf:type property:Country;
+	 dc:title "Northern Ireland" .
+
+:UK rdf:type property:Country;
+	 dc:title "UK" .
+
+:ds1 rdf:type qb:Dataset;
+	dc:title "the current trading status of enterprise, Percentage of all responding businesses, broken down by industry";
+	qb:Slice :ds1_5_2;
+	qb:Slice :ds1_5_3;
+	qb:Slice :ds1_5_4;
+	qb:Slice :ds1_6_2;
+	qb:Slice :ds1_6_3;
+	qb:Slice :ds1_6_4;
+	qb:Slice :ds1_7_2;
+	qb:Slice :ds1_7_3;
+	qb:Slice :ds1_7_4;
+	qb:Slice :ds1_8_2;
+	qb:Slice :ds1_8_3;
+	qb:Slice :ds1_8_4;
+	qb:Slice :ds1_9_2;
+	qb:Slice :ds1_9_3;
+	qb:Slice :ds1_9_4;
+	qb:Slice :ds1_10_2;
+	qb:Slice :ds1_10_3;
+	qb:Slice :ds1_10_4;
+	qb:Slice :ds1_11_2;
+	qb:Slice :ds1_11_3;
+	qb:Slice :ds1_11_4;
+	qb:Slice :ds1_12_2;
+	qb:Slice :ds1_12_3;
+	qb:Slice :ds1_12_4;
+	qb:Slice :ds1_13_2;
+	qb:Slice :ds1_13_3;
+	qb:Slice :ds1_13_4;
+	qb:Slice :ds1_14_2;
+	qb:Slice :ds1_14_3;
+	qb:Slice :ds1_14_4;
+	qb:Slice :ds1_15_2;
+	qb:Slice :ds1_15_3;
+	qb:Slice :ds1_15_4;
+	qb:Slice :ds1_16_2;
+	qb:Slice :ds1_16_3;
+	qb:Slice :ds1_16_4;
+	qb:Slice :ds1_17_2;
+	qb:Slice :ds1_17_3;
+	qb:Slice :ds1_17_4 .
+
+:ds2 rdf:type qb:Dataset;
+	dc:title "the current trading status of enterprise, Percentage of all responding businesses, broken down by size band";
+	qb:Slice :ds2_31_2;
+	qb:Slice :ds2_31_3;
+	qb:Slice :ds2_31_4;
+	qb:Slice :ds2_32_2;
+	qb:Slice :ds2_32_3;
+	qb:Slice :ds2_32_4;
+	qb:Slice :ds2_33_2;
+	qb:Slice :ds2_33_3;
+	qb:Slice :ds2_33_4 .
+
+:ds3 rdf:type qb:Dataset;
+	dc:title "the current trading status of enterprise, Percentage of all responding businesses, broken down by country";
+	qb:Slice :ds3_46_2;
+	qb:Slice :ds3_46_3;
+	qb:Slice :ds3_46_4;
+	qb:Slice :ds3_47_2;
+	qb:Slice :ds3_47_3;
+	qb:Slice :ds3_47_4;
+	qb:Slice :ds3_48_2;
+	qb:Slice :ds3_48_3;
+	qb:Slice :ds3_48_4;
+	qb:Slice :ds3_49_2;
+	qb:Slice :ds3_49_3;
+	qb:Slice :ds3_49_4;
+	qb:Slice :ds3_50_2;
+	qb:Slice :ds3_50_3;
+	qb:Slice :ds3_50_4 .
+
+:ds1_5_2 rdf:type qb:Observation;
+	rdf:value 0.79;
+	qb:dataset :ds1;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :Manufacturing;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_5_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds1;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :Manufacturing;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_5_4 rdf:type qb:Observation;
+	rdf:value 0.206;
+	qb:dataset :ds1;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :Manufacturing;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_6_2 rdf:type qb:Observation;
+	rdf:value 0.9;
+	qb:dataset :ds1;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :WaterSupplySewerageWasteManagementAndRemediationActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_6_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds1;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :WaterSupplySewerageWasteManagementAndRemediationActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_6_4 rdf:type qb:Observation;
+	rdf:value 0.1;
+	qb:dataset :ds1;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :WaterSupplySewerageWasteManagementAndRemediationActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_7_2 rdf:type qb:Observation;
+	rdf:value 0.732;
+	qb:dataset :ds1;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :Construction;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_7_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds1;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :Construction;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_7_4 rdf:type qb:Observation;
+	rdf:value 0.261;
+	qb:dataset :ds1;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :Construction;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_8_2 rdf:type qb:Observation;
+	rdf:value 0.752;
+	qb:dataset :ds1;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_8_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds1;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_8_4 rdf:type qb:Observation;
+	rdf:value 0.243;
+	qb:dataset :ds1;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_9_2 rdf:type qb:Observation;
+	rdf:value 0.182;
+	qb:dataset :ds1;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :AccommodationAndFoodServiceActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_9_3 rdf:type qb:Observation;
+	rdf:value 0.012;
+	qb:dataset :ds1;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :AccommodationAndFoodServiceActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_9_4 rdf:type qb:Observation;
+	rdf:value 0.806;
+	qb:dataset :ds1;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :AccommodationAndFoodServiceActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_10_2 rdf:type qb:Observation;
+	rdf:value 0.915;
+	qb:dataset :ds1;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :TransportationAndStorage;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_10_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds1;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :TransportationAndStorage;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_10_4 rdf:type qb:Observation;
+	rdf:value 0.085;
+	qb:dataset :ds1;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :TransportationAndStorage;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_11_2 rdf:type qb:Observation;
+	rdf:value 0.95;
+	qb:dataset :ds1;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :InformationAndCommunication;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_11_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds1;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :InformationAndCommunication;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_11_4 rdf:type qb:Observation;
+	rdf:value 0.0451232;
+	qb:dataset :ds1;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :InformationAndCommunication;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_12_2 rdf:type qb:Observation;
+	rdf:value 0.967;
+	qb:dataset :ds1;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :ProfessionalScientificAndTechnicalActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_12_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds1;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :ProfessionalScientificAndTechnicalActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_12_4 rdf:type qb:Observation;
+	rdf:value 0.03;
+	qb:dataset :ds1;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :ProfessionalScientificAndTechnicalActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_13_2 rdf:type qb:Observation;
+	rdf:value 0.915;
+	qb:dataset :ds1;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :AdministrativeAndSupportServiceActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_13_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds1;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :AdministrativeAndSupportServiceActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_13_4 rdf:type qb:Observation;
+	rdf:value 0.081;
+	qb:dataset :ds1;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :AdministrativeAndSupportServiceActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_14_2 rdf:type qb:Observation;
+	rdf:value 0.868;
+	qb:dataset :ds1;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :Education;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_14_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds1;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :Education;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_14_4 rdf:type qb:Observation;
+	rdf:value 0.126;
+	qb:dataset :ds1;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :Education;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_15_2 rdf:type qb:Observation;
+	rdf:value 0.938;
+	qb:dataset :ds1;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :HumanHealthAndSocialWorkActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_15_3 rdf:type qb:Observation;
+	rdf:value 0.014;
+	qb:dataset :ds1;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :HumanHealthAndSocialWorkActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_15_4 rdf:type qb:Observation;
+	rdf:value 0.049;
+	qb:dataset :ds1;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :HumanHealthAndSocialWorkActivities;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_16_2 rdf:type qb:Observation;
+	rdf:value 0.205;
+	qb:dataset :ds1;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :ArtsEntertainmentAndRecreation;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_16_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds1;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :ArtsEntertainmentAndRecreation;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_16_4 rdf:type qb:Observation;
+	rdf:value 0.795;
+	qb:dataset :ds1;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :ArtsEntertainmentAndRecreation;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_17_2 rdf:type qb:Observation;
+	rdf:value 0.767;
+	qb:dataset :ds1;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :AllIndustries;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_17_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds1;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :AllIndustries;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds1_17_4 rdf:type qb:Observation;
+	rdf:value 0.228;
+	qb:dataset :ds1;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :AllIndustries;
+	qb:dimension :T202004_202005;
+	qb:dimension :Industry .
+
+:ds2_31_2 rdf:type qb:Observation;
+	rdf:value 0.748;
+	qb:dataset :ds2;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :LessThan250;
+	qb:dimension :T202004_202005;
+	qb:dimension :WorkforceSize .
+
+:ds2_31_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds2;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :LessThan250;
+	qb:dimension :T202004_202005;
+	qb:dimension :WorkforceSize .
+
+:ds2_31_4 rdf:type qb:Observation;
+	rdf:value 0.247;
+	qb:dataset :ds2;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :LessThan250;
+	qb:dimension :T202004_202005;
+	qb:dimension :WorkforceSize .
+
+:ds2_32_2 rdf:type qb:Observation;
+	rdf:value 0.798;
+	qb:dataset :ds2;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :250Plus;
+	qb:dimension :T202004_202005;
+	qb:dimension :WorkforceSize .
+
+:ds2_32_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds2;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :250Plus;
+	qb:dimension :T202004_202005;
+	qb:dimension :WorkforceSize .
+
+:ds2_32_4 rdf:type qb:Observation;
+	rdf:value 0.197;
+	qb:dataset :ds2;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :250Plus;
+	qb:dimension :T202004_202005;
+	qb:dimension :WorkforceSize .
+
+:ds2_33_2 rdf:type qb:Observation;
+	rdf:value 0.767;
+	qb:dataset :ds2;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :AllSizeBands;
+	qb:dimension :T202004_202005;
+	qb:dimension :WorkforceSize .
+
+:ds2_33_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds2;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :AllSizeBands;
+	qb:dimension :T202004_202005;
+	qb:dimension :WorkforceSize .
+
+:ds2_33_4 rdf:type qb:Observation;
+	rdf:value 0.228;
+	qb:dataset :ds2;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :AllSizeBands;
+	qb:dimension :T202004_202005;
+	qb:dimension :WorkforceSize .
+
+:ds3_46_2 rdf:type qb:Observation;
+	rdf:value 0.778;
+	qb:dataset :ds3;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :England;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
+:ds3_46_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds3;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :England;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
+:ds3_46_4 rdf:type qb:Observation;
+	rdf:value 0.218;
+	qb:dataset :ds3;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :England;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
+:ds3_47_2 rdf:type qb:Observation;
+	rdf:value 0.762;
+	qb:dataset :ds3;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :Wales;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
+:ds3_47_3 rdf:type qb:Observation;
+	rdf:value 0.011;
+	qb:dataset :ds3;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :Wales;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
+:ds3_47_4 rdf:type qb:Observation;
+	rdf:value 0.227;
+	qb:dataset :ds3;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :Wales;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
+:ds3_48_2 rdf:type qb:Observation;
+	rdf:value 0.776;
+	qb:dataset :ds3;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :Scotland;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
+:ds3_48_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds3;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :Scotland;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
+:ds3_48_4 rdf:type qb:Observation;
+	rdf:value 0.217;
+	qb:dataset :ds3;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :Scotland;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
+:ds3_49_2 rdf:type qb:Observation;
+	rdf:value 0.728;
+	qb:dataset :ds3;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :NorthernIreland;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
+:ds3_49_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds3;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :NorthernIreland;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
+:ds3_49_4 rdf:type qb:Observation;
+	rdf:value 0.272;
+	qb:dataset :ds3;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :NorthernIreland;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
+:ds3_50_2 rdf:type qb:Observation;
+	rdf:value 0.767;
+	qb:dataset :ds3;
+	qb:dimension :Continuingtotrade;
+	qb:dimension :UK;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
+:ds3_50_3 rdf:type qb:Observation;
+	rdf:value *;
+	qb:dataset :ds3;
+	qb:dimension :Haspermanentlyceasedtrading__;
+	qb:dimension :UK;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
+:ds3_50_4 rdf:type qb:Observation;
+	rdf:value 0.228;
+	qb:dataset :ds3;
+	qb:dimension :Hastemporarilyclosedortemporarilypausedtrading;
+	qb:dimension :UK;
+	qb:dimension :T202004_202005;
+	qb:dimension :Country .
+
